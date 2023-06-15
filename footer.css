@@ -1,0 +1,87 @@
+footer {
+    padding: 20px 10px;
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary);
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer ul li a {
+    display: block;
+}
+
+footer ul li svg {
+    width: 46px;
+    height: 46px;
+}
+
+footer .address {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+footer .address h5 {
+    font-weight: bolder;
+    font-size: 36px;
+    text-align: center;
+}
+
+footer .address p {
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+footer .copyright {
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.map {
+    align-self: center;
+    border-radius: 100%;
+    margin-bottom: 20px;
+}
+
+.phone,
+.email,
+.contact-me {
+    text-decoration: none;
+    align-self: center;
+    color: var(--text-primary);
+}
+
+.contact-me {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.email {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 414px) {
+
+    footer{
+        padding-top: 40px;
+    }
+    footer ul li svg,
+    footer ul li a {
+        width: 32px;
+        height: 32px;
+    }
+}

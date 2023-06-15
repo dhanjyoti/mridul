@@ -1,0 +1,216 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-primary-color: #333333;
+    --text-primary: #ffffff;
+    --text-secondary: #000000;
+    --text-tertary: orange;
+}
+
+.services-cover {
+    background-image: url("services.jpg");
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.overlay {
+    inset: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.headlines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.headlines h4 {
+    color: white;
+    font-size: 34px;
+    font-weight: bolder;
+}
+
+.headlines h5 {
+    color: var(--text-tertary);
+    font-size: 44px;
+    font-weight: bolder;
+
+}
+
+.pricing {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing .pricing-card {
+    border: 3px solid var(--text-tertary);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-tertary);
+    z-index: 9999;
+    transition: all 0.5s;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.pricing .pricing-card>span:nth-child(2) {
+    margin-bottom: 10px;
+}
+
+.pricing .pricing-card:hover {
+    background-color: var(--text-tertary);
+    color: white;
+}
+
+
+.gallery>div {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 0px;
+    max-width: fit-content;
+    margin: auto;
+}
+
+/* .gallery>div>img {
+    max-width: 360px;
+    max-height: 360px;
+
+} */
+
+.gallery>div>div {
+    max-width: 360px;
+    max-height: 360px;
+    position: relative;
+}
+
+.gallery>div>div>img {
+    max-width: 360px;
+    transform: translate(0%, 0%);
+    transition: all 0.5s;
+}
+
+.gallery>div>div>img:hover {
+    -webkit-box-shadow: 0px 0px 67px 31px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 67px 31px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 67px 31px rgba(0, 0, 0, 1);
+
+
+    z-index: 999999;
+    position: absolute;
+    max-width: 440px;
+    transform: translate(-10%, -10%);
+}
+
+
+@media screen and (max-width: 920px) {
+    .gallery>div {
+        grid-template-columns: auto auto auto;
+        max-width: 100%;
+    }
+
+    .gallery>div>div {
+        width: 100%;
+    }
+
+    .gallery>div>div>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(0%);
+    }
+
+    .gallery>div>div>img:hover {
+        -webkit-box-shadow: 0px 0px 67px 31px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 0px 67px 31px rgba(0, 0, 0, 1);
+        box-shadow: 0px 0px 67px 31px rgba(0, 0, 0, 1);
+        z-index: 999999;
+        position: absolute;
+        transform: translate(0%);
+    }
+
+
+}
+
+@media screen and (max-width: 414px) {
+
+    .services-cover {
+        justify-content: start;
+        padding-top: 100px;
+        gap: 40px;
+        background-position-x: 25%;
+    }
+
+    .headlines h4 {
+        font-size: 24px;
+    }
+
+    .headlines h5 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .pricing {
+        grid-template-columns: auto;
+    }
+
+    .pricing .pricing-card span:first-child {
+        font-size: 16px;
+    }
+
+    .pricing .pricing-card span:nth-child(2),
+    .pricing .pricing-card span:last-child {
+        font-size: 14px;
+    }
+
+    .gallery>div {
+        grid-template-columns: auto auto;
+        max-width: 100%;
+    }
+
+    .gallery>div>div {
+        width: 100%;
+    }
+
+    .gallery>div>div>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(0%);
+    }
+
+    .gallery>div>div>img:hover {
+        -webkit-box-shadow: 0px 0px 67px 31px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0px 0px 67px 31px rgba(0, 0, 0, 1);
+        box-shadow: 0px 0px 67px 31px rgba(0, 0, 0, 1);
+        z-index: 999999;
+        position: absolute;
+        transform: translate(0%);
+    }
+}
